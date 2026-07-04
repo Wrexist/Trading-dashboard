@@ -2,6 +2,7 @@
   "name": "sentinel",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "SENTINEL — Multi-Source Trading Analysis & Decision Cockpit (ranks and explains; never promises profit)",
   "engines": {
     "node": ">=22",
@@ -9,9 +10,16 @@
   },
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "typecheck": "pnpm -r exec tsc --noEmit"
+    "typecheck": "pnpm -r exec tsc --noEmit && tsc --noEmit -p scripts/tsconfig.json",
+    "smoke": "tsx scripts/smoke-test.ts"
   },
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.1",
+    "dotenv": "^16.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "undici": "^7.10.0",
+    "ws": "^8.18.2"
   }
 }
