@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "_note": "Phase 0 seed (ROADMAP §2.4). Factor weights are defined and golden-file tested in Phase 2; until then this file only fixes the versioning convention. Every eval binds to a weights hash. Changes land as a new weights.vN+1.json via the §2.12 human-approved proposal loop — never edited in place once live.",
+  "profiles": {
+    "DAYTRADE": { "factors": {} },
+    "SWING": { "factors": {} },
+    "INVEST": { "factors": {} },
+    "MEMECOIN": { "factors": {} }
+  }
+}
