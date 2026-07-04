@@ -1,0 +1,10 @@
+{
+  "name": "@sentinel/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Typed contracts shared by ui and server: event catalog, common types. No runtime logic in Phase 0.",
+  "exports": {
+    "./events": "./events.ts"
+  }
+}

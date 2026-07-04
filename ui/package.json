@@ -1,0 +1,7 @@
+{
+  "name": "@sentinel/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SENTINEL UI (React/Vite — implementation starts Phase 1). No risk/sizing/limit logic here, ever."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sentinel",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SENTINEL — Multi-Source Trading Analysis & Decision Cockpit (ranks and explains; never promises profit)",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "typecheck": "pnpm -r exec tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@sentinel/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SENTINEL backend (Fastify — implementation starts Phase 1). Risk/sizing/limit logic lives here only, never in ui."
+}
