@@ -1,11 +1,17 @@
-# TASK.md — CURRENT PHASE: 0 (Spec & Foundations)
+# TASK.md — CURRENT PHASE: 1 (Event Bus, Ingestion, Shell)
 
-Scope rule: this file tracks Phase 0 ONLY. Later-phase work is out of bounds until the gate passes. Ideas → `IDEAS.md`.
+Scope rule: this file tracks Phase 1 ONLY. Later-phase work is out of bounds until the gate passes. Ideas → `IDEAS.md`.
 
-- [x] pnpm monorepo scaffold (ui / server / shared) + project files (CLAUDE.md, TASK.md, LEARNINGS.md, IDEAS.md, weights.v1.json)
-- [x] `shared/events.ts` event catalog (ROADMAP §2.0)
-- [x] `.env.example` + smoke-test script covering every §2.1 source (+ ntfy/Telegram per Phase 0 gate) — `pnpm smoke`
-- [ ] API key registration (human) — fill `.env`, run `pnpm smoke` until green on every source
-- [ ] Sentry + Tailscale + ntfy setup (human: accounts/devices) — forced error visible in Sentry
+Carried over from Phase 0 (human, still open — user chose to proceed):
+- [ ] API key registration — fill `.env`, run `pnpm smoke` until green on every source
+- [ ] Sentry + Tailscale + ntfy setup — forced error visible in Sentry
 
-**Gate (ROADMAP §4):** smoke script green on every source; forced error visible in Sentry.
+Phase 1:
+- [ ] Event bus (typed pub/sub) + append-only persistence of the event stream
+- [ ] Adapter framework (`fetch/normalize/healthCheck/rateBudget/backoff` + circuit breaker)
+- [ ] Adapters: Alpaca WS, CoinGecko, Finnhub news
+- [ ] Validation layer (bad-tick filter, news dedup) + SQLite schemas
+- [ ] Market-hours module `sessionState(exchange)`
+- [ ] UI shell: top strip, Signals view (empty state), Health view, command palette skeleton
+
+**Gate (ROADMAP §4):** 48h unattended run, zero silent failures; every failure visible in Health + Sentry.
