@@ -90,8 +90,9 @@ export interface QuoteTick extends EventEnvelope {
   type: "QuoteTick";
   symbol: string;
   assetClass: AssetClass;
-  bid: number;
-  ask: number;
+  /** Absent when the source provides no order-book data (e.g. CoinGecko snapshots) — never fabricated. */
+  bid?: number;
+  ask?: number;
   last: number;
   /** Exchange/venue timestamp of the tick, UTC ISO-8601. */
   tickAt: string;
