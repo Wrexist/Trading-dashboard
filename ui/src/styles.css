@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* §3.1: typography does the hierarchy work. Inter for UI (system fallback —
+   local-first, no font CDN), tabular mono for all numbers. Dark only in v1. */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-300 antialiased;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.num {
+  font-family: "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}

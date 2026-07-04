@@ -7,11 +7,12 @@ Carried over from Phase 0 (human, still open — user chose to proceed):
 - [ ] Sentry + Tailscale + ntfy setup — forced error visible in Sentry
 
 Phase 1:
-- [ ] Event bus (typed pub/sub) + append-only persistence of the event stream
-- [ ] Adapter framework (`fetch/normalize/healthCheck/rateBudget/backoff` + circuit breaker)
-- [ ] Adapters: Alpaca WS, CoinGecko, Finnhub news
-- [ ] Validation layer (bad-tick filter, news dedup) + SQLite schemas
-- [ ] Market-hours module `sessionState(exchange)`
-- [ ] UI shell: top strip, Signals view (empty state), Health view, command palette skeleton
+- [x] Event bus (typed pub/sub) + append-only persistence of the event stream
+- [x] Adapter framework (rate budget, backoff + circuit breaker, health events)
+- [x] Adapters: Alpaca WS (1m bars), CoinGecko, Finnhub news
+- [x] Validation layer (bad-tick filter, news dedup) + SQLite schemas
+- [x] Market-hours module `sessionState(exchange)`
+- [x] UI shell: top strip, Signals view (empty state), Health view, command palette skeleton
+- [ ] 48h unattended run on the target machine (human — needs keys in `.env`)
 
 **Gate (ROADMAP §4):** 48h unattended run, zero silent failures; every failure visible in Health + Sentry.

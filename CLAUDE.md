@@ -33,4 +33,7 @@ Multi-source trading analysis & decision cockpit. It **ranks and explains — it
 
 - `pnpm install` — install workspace deps
 - `pnpm typecheck` — typecheck all packages
+- `pnpm test` — run server test suite (vitest)
 - `pnpm smoke` — Phase 0 smoke test: hits every §2.1 source with real keys from `.env`, prints pass/fail
+- `pnpm --filter @sentinel/server dev` — run the backend (port 3001; reads `.env`)
+- `pnpm --filter @sentinel/ui dev` — run the UI dev server (port 5173, proxies `/api` to 3001)

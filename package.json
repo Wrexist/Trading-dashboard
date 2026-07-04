@@ -11,6 +11,7 @@
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "typecheck": "pnpm -r exec tsc --noEmit && tsc --noEmit -p scripts/tsconfig.json",
+    "test": "pnpm --filter @sentinel/server test",
     "smoke": "tsx scripts/smoke-test.ts"
   },
   "devDependencies": {
