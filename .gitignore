@@ -8,8 +8,9 @@ node_modules/
 dist/
 *.tsbuildinfo
 
-# Local data (SQLite, logs)
+# Local data (SQLite incl. WAL/SHM, logs)
 *.sqlite
 *.sqlite3
 *.db
+server/data/
 logs/
